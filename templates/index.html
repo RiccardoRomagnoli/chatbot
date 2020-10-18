@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Our project is a Chatbot, trained on a dataset manually collected from Stack Overflow, which is one of the leading programming Question-Answering (QA) platforms online. The dataset contains around 230 manually collected questions and answers ranging over 7 categories including: Greetings, Library related questions, Errors, Syntax, Code Interpretation, Methods, and Directories.">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/static/style.css">
    	<script src="https://code.jquery.com/jquery-3.4.1.min.js" ></script>
 </head>
 <body>
 <div class="jumbotron jumbotron-fluid fixed-top position-sticky" style="margin: auto;">
-  <div class="container">
-<table   align="center">
-<tr>
-<td>
-<img src="/static/profilepic.jpg" alt="Stackbot" style="width:50px;">
-</td>
-<td>    
-<h1 class="display-4" >Stackbot</h1>
-</td>
-</tr>
-</table> 
-</div>
+    <div class="container">
+        <!-- align attribute is deprecated -->
+        <table align="center">
+            <tr>
+                <td>
+                    <img src="/static/profilepic.jpg" alt="Stackbot" style="width:50px;">
+                </td>
+                <td>    
+                    <h1 class="display-4" >Stackbot</h1>
+                </td>
+            </tr>
+        </table> 
+    </div>
 </div>
     
 <div class="container" style="padding:10px;">
     <div class="row">
         <div class="col-sm-6 offset-sm-3">
             <div id="chatbox" class="border border-primary">
-<p></p>
+                <p></p>
                 <p class="botText"><pre class="bot">Hi! I'm Stackbot <3</pre></p>
             </div>
             <div id="userInput">
@@ -36,7 +38,7 @@
         </div>
     </div>
 
-<script>
+    <script>
     function getResponse() {
         let userText = $("#textInput").val();
         let userHtml = '<p class="userText" ><pre class="user">' + userText + '</pre></p>';
@@ -44,17 +46,19 @@
         $("#chatbox").append(userHtml);
         document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
         $.get("/get", { msg: userText }).done(function(data) {
-        var botHtml = '<p class="botText" ><pre class="bot">' + data + '</pre></p>';
-        $("#chatbox").append(botHtml);
-        document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
-});
-}
+            var botHtml = '<p class="botText" ><pre class="bot">' + data + '</pre></p>';
+            $("#chatbox").append(botHtml);
+            document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+        });
+    }
+
     $("#textInput").keyup(function(e) {
-    //if enter key is pressed
+        //if enter key is pressed
         if(e.keyCode == 13) {
             getResponse();
         }
     });
+
     $("#buttonInput").click(function() {
         getResponse();
     });
@@ -63,7 +67,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </div>
-
 </body>
-
 </html>
