@@ -1,53 +1,53 @@
 
 .user{
-   background-color: #0084FF;
+    background-color: #0084FF;
     padding: 10px;
     border-radius: 2px;
-  font-size: 16px;
-color:white;
-  border-radius: 5px;
-  padding: 14px;
+    font-size: 16px;
+    color:white;
+    border-radius: 5px;
+    padding: 14px;
 
-  margin-left:25%;
+    margin-left:25%;
   
-  /* Fixed line height */
-  line-height: 24px;
+    /* Fixed line height */
+    line-height: 24px;
   
 
-  /* Size background so that the height is 2x line-height */
-  background-size: 100% 48px;
+    /* Size background so that the height is 2x line-height */
+    background-size: 100% 48px;
   
-  /* Offset the background along the y-axis by top padding */
-  background-position: 0 14px;
-  overflow-x: auto;
-            white-space: pre-wrap;
-            white-space: -moz-pre-wrap;
-            white-space: -pre-wrap;
-            white-space: -o-pre-wrap;
-            word-wrap: break-word;
+    /* Offset the background along the y-axis by top padding */
+    background-position: 0 14px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
 }
 
 .bot{
-   background-color: #e9ebee;
+    background-color: #e9ebee;
     padding: 10px;
     border-radius: 2px;
-  font-size: 16px;
-  border-radius: 5px;
-  padding: 14px;
-  margin-right:25%;
-  /* Fixed line height */
-  line-height: 24px;
-  
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 14px;
+    margin-right:25%;
+    /* Fixed line height */
+    line-height: 24px;
+    
 
-  /* Size background so that the height is 2x line-height */
-  background-size: 100% 48px;
-  
-  /* Offset the background along the y-axis by top padding */
-  background-position: 0 14px;
-  overflow-x: auto;
-            white-space: pre-wrap;
-            white-space: -moz-pre-wrap;
-            white-space: -pre-wrap;
-            white-space: -o-pre-wrap;
-            word-wrap: break-word;
+    /* Size background so that the height is 2x line-height */
+    background-size: 100% 48px;
+    
+    /* Offset the background along the y-axis by top padding */
+    background-position: 0 14px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
 }
